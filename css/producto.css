@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ef;
+}
+header{
+
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 10%;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+header h1{
+
+    color:#b2185b;
+}
+nav a{
+
+    text-decoration:none;
+    color:#444;
+    margin-left:30px;
+    font-weight:500;
+}
+.producto{
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    padding:60px 10%;
+}
+.imagen-principal{
+
+    width:100%;
+    border-radius:15px;
+}
+.miniaturas{
+
+    display:flex;
+    gap:15px;
+    margin-top:20px;
+}
+.miniaturas img{
+
+    width:90px;
+    cursor:pointer;
+    border-radius:10px;
+    transition:.3s;
+}
+.miniaturas img:hover{
+    transform:scale(1.1);
+}
+.informacion h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+.estrellas{
+    font-size:22px;
+    margin-bottom:20px;
+}
+.informacion h3{
+
+    color:#b2185b;
+    font-size:32px;
+    margin-bottom:20px;
+}
+.informacion p{
+    margin-bottom:25px;
+    color:#555;
+}
+.tallas{
+    display:flex;
+    gap:10px;
+    margin:15px 0;
+}
+.tallas button{
+    width:45px;
+    height:45px;
+    border:none;
+    background:white;
+    cursor:pointer;
+    border-radius:8px;
+}
+.colores{
+    display:flex;
+    gap:15px;
+    margin:20px 0;
+}
+.colores span {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.rosa{background:#d81b60;}
+.blanco{background:white;border:1px solid #ccc;}
+.rojo{background:#d50000;}
+.turquesa{background:#00bcd4;}
+.amarillo {background-color: #f4c430;}
+.verde {background-color: #4caf50;}
+
+ul{
+    margin:30px 0;
+}
+
+li{
+    margin-bottom:10px;
+}
+
+.carrito{
+    width:100%;
+    padding:18px;
+    background:#b2185b;
+    color:white;
+    border:none;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.historia{
+    padding:60px 10%;
+    background:white;
+}
+
+.historia h2{
+    margin-bottom:20px;
+}
+
+.relacionados{
+    padding:60px 10%;
+}
+
+.productos{
+    display:flex;
+    gap:30px;
+    margin-top:30px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+}
+
+.card h3,.card p{
+    padding:15px;
+}
+
+@media(max-width:900px){
+
+.producto{
+grid-template-columns:1fr;
+}
+
+.productos{
+flex-direction:column;
+}
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+nav{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+.miniatura-activa {
+    outline: 3px solid #b2185b;
+    outline-offset: 2px;
+}
+
+/* Tallas y colores en la misma fila */
+.informacion .opciones-producto {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.informacion .opciones-producto .grupo-opcion {
+    width: auto;
+    flex: 0 0 auto;
+}
+
+.grupo-opcion h4 {
+    margin-bottom: 12px;
+}
+
+.grupo-opcion .tallas,
+.grupo-opcion .colores {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Mantener los colores completamente redondos */
+.colores span {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.tallas button.seleccionada {
+    background-color: #b2185b;
+    color: white;
+}
+
+.colores span {
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.colores span.color-seleccionado {
+    border-color: #3d2923;
+    outline: 2px solid white;
+    outline-offset: -4px;
+    transform: scale(1.12);
+}
+
+.tallas button:focus-visible,
+.carrito:focus-visible,
+.miniaturas img:focus-visible {
+    outline: 3px solid #00a7a7;
+    outline-offset: 3px;
+}
+/* Talla seleccionada */
+#producto-tallas button.seleccionada {
+    background-color: #b2185b;
+    color: white;
+    border-color: #b2185b;
+}
+#producto-tallas button.seleccionada {
+    background-color: #b2185b;
+    color: white;
+    border: 2px solid #b2185b;
+}

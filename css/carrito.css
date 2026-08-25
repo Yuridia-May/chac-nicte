@@ -1,0 +1,430 @@
+body {
+    background-color: #ffecf3;
+}
+/* =========================================
+   CARRITO - CHAC NICTÉ
+========================================= */
+
+.contenedor-carrito {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 25px;
+}
+
+/* Cada producto del carrito */
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+#contenedor-carrito {
+    width: 100%;
+    max-width: 900px;
+}
+/* Imagen del producto */
+.imagen-carrito {
+    width: 180px;
+    height: 180px;
+
+    object-fit: cover;
+    border-radius: 14px;
+
+    flex-shrink: 0;
+}
+
+/* Información */
+.datos-carrito {
+    flex: 1;
+}
+
+.datos-carrito h3 {
+    margin: 0 0 12px;
+    font-size: 22px;
+    color: #9e2f63;
+}
+
+.datos-carrito p {
+    margin: 7px 0;
+    font-size: 16px;
+}
+
+/* Precio */
+.precio-carrito {
+    margin-top: 15px !important;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #9e2f63;
+}
+/* =========================================
+   RESUMEN DE COMPRA
+========================================= */
+
+.resumen-carrito {
+    max-width: 450px;
+    margin: 35px 0 35px auto;
+    padding: 25px;
+
+    background: #fff0f5;
+    border: 1px solid #f0ccda;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.resumen-carrito h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    color: #9e2f63;
+}
+
+.fila-resumen {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 10px 0;
+    font-size: 17px;
+}
+
+.total-resumen {
+    margin-top: 10px;
+    padding-top: 18px;
+
+    border-top: 1px solid #ddd;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+/* CONTROLES DE CANTIDAD */
+
+.cantidad-carrito {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.boton-cantidad {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d9b3c5;
+    border-radius: 8px;
+
+    background: white;
+    color: #9e2f63;
+
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-cantidad:hover {
+    background: #9e2f63;
+    color: white;
+}
+
+.cantidad-carrito span {
+    min-width: 24px;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+/* BOTÓN ELIMINAR */
+
+.boton-eliminar {
+    margin-top: 8px;
+    padding: 9px 16px;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #f7e7ee;
+    color: #9e2f63;
+
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background: #9e2f63;
+    color: white;
+}
+.subtotal-carrito {
+    margin-top: 6px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #6f294b;
+}
+/* =========================================
+   ENCABEZADO DEL CARRITO
+========================================= */
+
+.encabezado-carrito {
+    min-height: 95px;
+    padding: 18px 5%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: #fff4f7;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-carrito {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.flor-logo {
+    font-size: 32px;
+}
+
+.logo-carrito h1 {
+    margin: 0;
+    font-size: 27px;
+    color: #a72863;
+}
+
+.logo-carrito p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.menu-carrito {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.menu-carrito a {
+    color: #2d2025;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.menu-carrito a:hover {
+    color: #b2185b;
+}
+
+.carrito-header-carrito {
+    padding: 11px 20px;
+    border: 1px solid #d7a9bd;
+    border-radius: 25px;
+
+    color: #a72863;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+/* CABECERA DEL CONTENIDO */
+
+.cabecera-carrito {
+    max-width: 1200px;
+    margin: 35px auto 25px;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.cabecera-carrito h2 {
+    margin: 0;
+    font-size: 32px;
+    color: #5f3f49;
+    white-space: nowrap;
+}
+
+.etiqueta-carrito {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #b2185b;
+    white-space: nowrap;
+}
+
+.cabecera-carrito p {
+    margin: 0;
+    font-size: 16px;
+    color: #b2185b;
+}
+
+.separador-carrito {
+    width: 1px;
+    height: 28px;
+    background: #d7a9bd;
+    flex-shrink: 0;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 950px) {
+
+    .encabezado-carrito {
+        flex-wrap: wrap;
+    }
+
+    .menu-carrito {
+        order: 3;
+        width: 100%;
+
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+.layout-carrito {
+    display: grid;
+    grid-template-columns: minmax(0, 900px) 360px;
+    gap: 30px;
+
+    max-width: 1290px;
+    margin: 0 auto;
+    padding: 0 30px 50px;
+
+    align-items: start;
+    justify-content: center;
+}
+
+#contenedor-carrito {
+    width: 100%;
+}
+
+.resumen-carrito {
+    width: 100%;
+    margin: 0;
+
+    position: sticky;
+    top: 125px;
+}
+
+#contenedor-carrito {
+    width: 100%;
+}
+
+.resumen-carrito {
+    width: 100%;
+    margin: 0;
+
+    position: sticky;
+    top: 125px;
+}
+
+#contenedor-carrito {
+    width: 100%;
+}
+
+.resumen-carrito {
+    width: 100%;
+    margin: 0;
+
+    position: sticky;
+    top: 125px;
+}
+@media (max-width: 900px) {
+    .cabecera-carrito {
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    padding: 0 20px;
+}
+
+.cabecera-carrito h2 {
+    font-size: 28px;
+}
+
+.etiqueta-carrito {
+    font-size: 11px;
+}
+
+.cabecera-carrito p {
+    width: 100%;
+    font-size: 15px;
+}
+
+.separador {
+    font-size: 18px;
+}
+    .layout-carrito {
+        grid-template-columns: 1fr;
+    }
+
+    .resumen-carrito {
+        position: static;
+    }
+}
+/* =========================================
+   ACCIONES DEL RESUMEN
+========================================= */
+
+.acciones-resumen {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    margin-top: 25px;
+}
+
+/* FINALIZAR COMPRA */
+
+.btn-finalizar {
+    width: 100%;
+    padding: 14px 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #a72863;
+    color: #ffffff;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.btn-finalizar:hover {
+    background: #8f2154;
+    transform: translateY(-1px);
+}
+
+
+/* SEGUIR COMPRANDO */
+
+.btn-seguir-comprando {
+    display: block;
+
+    padding: 10px;
+    text-align: center;
+
+    color: #a72863;
+    text-decoration: none;
+
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-seguir-comprando:hover {
+    text-decoration: underline;
+}

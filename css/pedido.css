@@ -1,0 +1,558 @@
+/* =========================================
+   PÁGINA DE PEDIDO - CHAC NICTÉ
+========================================= */
+
+body {
+    margin: 0;
+    background: #fff5f8;
+    color: #452e35;
+}
+
+/* =========================================
+   ENCABEZADO
+========================================= */
+
+.encabezado-pedido {
+    min-height: 90px;
+    padding: 16px 6%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: #fff4f7;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-pedido {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.flor-logo {
+    font-size: 32px;
+}
+
+.logo-pedido h1 {
+    margin: 0;
+    font-size: 27px;
+    color: #a72863;
+}
+
+.logo-pedido p {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #777;
+}
+
+.volver-carrito {
+    padding: 11px 20px;
+
+    border: 1px solid #d7a9bd;
+    border-radius: 25px;
+
+    color: #a72863;
+    text-decoration: none;
+    font-weight: 600;
+
+    transition: 0.2s ease;
+}
+
+.volver-carrito:hover {
+    background: #fbe5ee;
+}
+/* =========================================
+   CONTENIDO PRINCIPAL
+========================================= */
+
+.pagina-pedido {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 45px 30px 60px;
+}
+
+/* =========================================
+   TÍTULO DEL PEDIDO
+========================================= */
+
+.titulo-pedido {
+    margin-bottom: 35px;
+}
+
+.titulo-pedido > span {
+    display: block;
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #b2185b;
+}
+
+.titulo-pedido h2 {
+    margin: 0 0 10px;
+    font-size: 38px;
+    color: #452e35;
+}
+
+.titulo-pedido p {
+    margin: 0;
+    font-size: 17px;
+    color: #6d5b61;
+}
+
+
+/* =========================================
+   DISTRIBUCIÓN DE LA PÁGINA
+========================================= */
+
+.layout-pedido {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 35px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   COLUMNA IZQUIERDA
+========================================= */
+
+.formulario-pedido {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.bloque-pedido {
+    background: #ffffff;
+
+    border-radius: 18px;
+    padding: 25px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+}
+/* =========================================
+   DATOS DE CONTACTO
+========================================= */
+
+.bloque-pedido h3 {
+    margin: 0 0 6px;
+    font-size: 21px;
+    color: #452e35;
+}
+
+.bloque-pedido > p {
+    margin: 0 0 20px;
+    color: #77666c;
+    font-size: 15px;
+}
+
+
+/* Número del paso: 1, 2, 3 */
+
+.numero-paso {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+    background: #fbe3ed;
+
+    color: #b2185b;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+
+/* Campos */
+
+.campo-pedido {
+    margin-top: 16px;
+}
+
+.campo-pedido label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #452e35;
+}
+
+.campo-pedido input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 13px 15px;
+
+    border: 1px solid #e4cbd5;
+    border-radius: 10px;
+
+    background: #fffafb;
+
+    font-size: 15px;
+    color: #452e35;
+
+    outline: none;
+
+    transition: 0.2s ease;
+}
+
+.campo-pedido input:focus {
+    border-color: #b72a68;
+    background: #ffffff;
+
+    box-shadow: 0 0 0 3px rgba(183, 42, 104, 0.08);
+}
+
+.campo-pedido input::placeholder {
+    color: #aaa0a4;
+}
+/* =========================================
+   FORMA DE ENTREGA
+========================================= */
+
+.opciones-entrega {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    margin-top: 18px;
+}
+
+.opcion-entrega {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 18px;
+
+    border: 1px solid #ead0db;
+    border-radius: 14px;
+
+    background: #fffafb;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.opcion-entrega:hover {
+    border-color: #c75b88;
+    background: #fff5f8;
+
+    transform: translateY(-2px);
+}
+
+.opcion-entrega input {
+    margin-top: 4px;
+
+    accent-color: #b72a68;
+    cursor: pointer;
+}
+
+.contenido-opcion {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.contenido-opcion strong {
+    font-size: 16px;
+    color: #452e35;
+}
+
+.contenido-opcion span {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #77666c;
+}
+/* Opción de entrega seleccionada */
+.opcion-entrega:has(input[type="radio"]:checked) {
+    border-color: #b52667;
+    background: #fff0f6;
+
+    box-shadow: 0 5px 15px rgba(181, 38, 103, 0.10);
+}
+
+/* Radio seleccionado */
+.opcion-entrega input[type="radio"] {
+    accent-color: #b52667;
+}
+
+/* Pequeño efecto al pasar el mouse */
+.opcion-entrega:hover {
+    border-color: #d98aad;
+    background: #fff8fb;
+}
+/* =========================================
+   RESUMEN DEL PEDIDO
+========================================= */
+
+.resumen-pedido {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 26px;
+
+    background: #fff7fa;
+
+    border: 1px solid #efd3df;
+    border-radius: 18px;
+
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+    position: sticky;
+    top: 125px;
+}
+
+.resumen-pedido h3 {
+    margin: 0 0 22px;
+
+    font-size: 24px;
+    color: #a72863;
+}
+
+
+/* Cada producto dentro del resumen */
+
+.producto-resumen {
+    display: flex;
+    justify-content: space-between;
+    gap: 18px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid #ecdde3;
+}
+
+.producto-resumen strong {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 16px;
+    color: #452e35;
+}
+
+.producto-resumen p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.5;
+    color: #77666c;
+}
+
+.producto-resumen > span {
+    flex-shrink: 0;
+
+    font-size: 15px;
+    font-weight: 600;
+    color: #a72863;
+}
+
+
+/* Línea separadora */
+
+.linea-resumen {
+    margin: 5px 0;
+}
+
+
+/* Total */
+
+.total-pedido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 0 8px;
+
+    font-size: 18px;
+}
+
+.total-pedido span {
+    font-weight: 600;
+    color: #452e35;
+}
+
+.total-pedido strong {
+    font-size: 20px;
+    color: #452e35;
+}
+
+
+/* Nota del envío */
+
+.nota-envio {
+    margin: 18px 0 0;
+
+    padding: 14px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    font-size: 13px;
+    line-height: 1.5;
+    color: #77666c;
+}
+/* =========================================
+   BOTÓN CONFIRMAR PEDIDO
+========================================= */
+
+.btn-confirmar-pedido {
+    width: 100%;
+
+    margin-top: 22px;
+    padding: 15px 22px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #b52667;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.btn-confirmar-pedido:hover {
+    background: #9f1f59;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 6px 16px rgba(181, 38, 103, 0.20);
+}
+
+.btn-confirmar-pedido:active {
+    transform: translateY(0);
+}
+/* =========================
+   RESPONSIVE - CELULAR
+========================= */
+
+@media (max-width: 768px) {
+
+    .layout-pedido {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .formulario-pedido {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .resumen-pedido {
+        position: static;
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+        box-sizing: border-box;
+    }
+}
+/* =========================================
+   RESPONSIVE - FORMA DE ENTREGA EN CELULAR
+========================================= */
+
+@media (max-width: 600px) {
+
+    .opciones-entrega {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .opcion-entrega {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+/* =========================================
+   DATOS ADICIONALES DE ENVÍO
+========================================= */
+
+.datos-envio {
+    display: none;
+
+    margin-top: 20px;
+    padding: 20px;
+
+    border-radius: 14px;
+    background: #fff7fa;
+
+    border: 1px solid #efd3df;
+}
+
+.datos-envio.activo {
+    display: block;
+}
+
+.aviso-envio {
+    margin: 18px 0 0;
+    padding: 12px 14px;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    font-size: 13px;
+    line-height: 1.5;
+    color: #77666c;
+}
+/* ===== CAMPOS DE ENVÍO MÁS COMPACTOS ===== */
+
+.datos-envio {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 20px;
+}
+
+.datos-envio.activo {
+    display: grid;
+}
+
+/* Dirección y referencias ocupan todo el ancho */
+.datos-envio .campo-pedido:nth-of-type(3),
+.datos-envio .campo-pedido:nth-of-type(4),
+.datos-envio .campo-pedido:nth-of-type(5),
+.datos-envio .aviso-envio {
+    grid-column: 1 / -1;
+}
+
+/* En celular vuelve a una sola columna */
+@media (max-width: 768px) {
+    .datos-envio {
+        grid-template-columns: 1fr;
+    }
+
+    .datos-envio .campo-pedido,
+    .datos-envio .aviso-envio {
+        grid-column: 1;
+    }
+}

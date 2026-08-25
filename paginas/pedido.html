@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Finalizar pedido | Chac Nicté</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/pedido.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado-pedido">
+
+        <div class="logo-pedido">
+            <span class="flor-logo">🌺</span>
+
+            <div>
+                <h1>CHAC NICTÉ</h1>
+                <p>Tejiendo tradición, compartiendo cultura</p>
+            </div>
+        </div>
+
+        <a href="carrito.html" class="volver-carrito">
+            ← Volver al carrito
+        </a>
+
+    </header>
+
+
+    <main class="pagina-pedido">
+
+        <!-- TÍTULO -->
+        <div class="titulo-pedido">
+            <span>FINALIZA TU PEDIDO</span>
+
+            <h2>Ya casi está listo 🌸</h2>
+
+            <p>
+                Completa tus datos y revisa tu pedido antes de confirmarlo.
+            </p>
+        </div>
+
+
+        <div class="layout-pedido">
+
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="formulario-pedido">
+
+                <!-- DATOS DE CONTACTO -->
+                <section class="bloque-pedido">
+
+                    <div class="titulo-bloque">
+                        <span class="numero-paso">1</span>
+
+                        <div>
+                            <h3>Datos de contacto</h3>
+                            <p>¿Con quién nos comunicaremos?</p>
+                        </div>
+                    </div>
+
+                    <div class="campo-pedido">
+    <label for="nombre">Nombre completo</label>
+
+    <input
+        type="text"
+        id="nombre"
+        placeholder="Escribe tu nombre"
+    >
+</div>
+
+<div class="campo-pedido">
+    <label for="telefono">Teléfono / WhatsApp</label>
+
+    <input
+        type="tel"
+        id="telefono"
+        placeholder="Ej. 983 000 0000"
+    >
+</div>
+
+                </section>
+
+
+                <!-- FORMA DE ENTREGA -->
+                <section class="bloque-pedido">
+
+                    <div class="titulo-bloque">
+                        <span class="numero-paso">2</span>
+
+                        <div>
+                            <h3>Forma de entrega</h3>
+                            <p>¿Cómo deseas recibir tu pedido?</p>
+                        </div>
+                    </div>
+
+
+<div class="opciones-entrega">
+
+    <label class="opcion-entrega">
+        <input
+            type="radio"
+            name="entrega"
+            value="recoger"
+        >
+
+        <div class="contenido-opcion">
+            <strong>📍 Recoger en X-Pichil</strong>
+            <span>Recoge tu pedido directamente en la comunidad.</span>
+        </div>
+    </label>
+
+
+    <label class="opcion-entrega">
+        <input
+            type="radio"
+            name="entrega"
+            value="envio"
+        >
+
+        <div class="contenido-opcion">
+            <strong>📦 Envío</strong>
+            <span>Los detalles y costo del envío se confirmarán posteriormente.</span>
+           
+        </div>
+    </label>
+
+</div>
+ <div id="datos-envio" class="datos-envio">
+
+    <div class="campo-pedido">
+        <label for="estado">Estado</label>
+        <input
+            type="text"
+            id="estado"
+            placeholder="Ej. Quintana Roo"
+        >
+    </div>
+
+    <div class="campo-pedido">
+        <label for="municipio">Municipio / Ciudad</label>
+        <input
+            type="text"
+            id="municipio"
+            placeholder="Ej. Cancún"
+        >
+    </div>
+
+    <div class="campo-pedido">
+        <label for="codigo-postal">Código postal</label>
+        <input
+            type="text"
+            id="codigo-postal"
+            placeholder="Ej. 77000"
+        >
+    </div>
+
+    <div class="campo-pedido">
+        <label for="direccion">Dirección</label>
+        <input
+            type="text"
+            id="direccion"
+            placeholder="Calle, número y colonia"
+        >
+    </div>
+
+    <div class="campo-pedido">
+        <label for="referencias">Referencias</label>
+        <input
+            type="text"
+            id="referencias"
+            placeholder="Alguna referencia para localizar el domicilio"
+        >
+    </div>
+
+    <p class="aviso-envio">
+        El costo y los detalles del envío se confirmarán posteriormente por WhatsApp.
+    </p>
+
+</div>
+
+                </section>
+
+
+                <!-- CONFIRMACIÓN -->
+                <section class="bloque-pedido">
+
+                    <div class="titulo-bloque">
+                        <span class="numero-paso">3</span>
+
+                        <div>
+                            <h3>Confirma tu pedido</h3>
+                            <p>
+                                Revisa que tus datos y prendas sean correctos.
+                            </p>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn-confirmar-pedido"
+                    >
+                        💬 Confirmar pedido por WhatsApp
+                    </button>
+
+                </section>
+
+            </div>
+
+
+            <!-- COLUMNA DERECHA -->
+            <aside class="resumen-pedido">
+
+    <h3>Resumen del pedido</h3>
+
+    <div id="lista-resumen-pedido"></div>
+
+    <div class="linea-resumen"></div>
+
+    <div class="total-pedido">
+        <span>Total</span>
+        <strong id="total-pedido">$0 MXN</strong>
+    </div>
+
+    <p class="nota-envio">
+        El costo de envío, en caso de aplicar, se confirmará posteriormente.
+    </p>
+
+</aside>
+
+        </div>
+
+    </main>
+<script src="../js/pedido.js"></script>
+</body>
+
+</html>

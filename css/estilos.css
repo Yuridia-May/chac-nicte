@@ -1,0 +1,3287 @@
+/* ==========================================
+CONFIGURACIÓN GENERAL
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+  
+  html {
+  scroll-behavior: smooth;
+  }
+  
+  body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf8f3;
+  color: #3d2923;
+  line-height: 1.6;
+  }
+  
+/* ==========================================
+   ENCABEZADO PRINCIPAL
+========================================== */
+
+.encabezado-principal {
+    width: 100%;
+    min-height: 88px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    padding: 18px 5%;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(20, 10, 10, 0.75),
+        rgba(20, 10, 10, 0)
+    );
+
+    color: #ffffff;
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.marca-simbolo {
+    font-size: 34px;
+}
+
+.marca-texto {
+    display: flex;
+    flex-direction: column;
+}
+
+.marca-texto strong {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.marca-texto small {
+    font-size: 10px;
+    letter-spacing: 0.4px;
+}
+
+.menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.menu-principal a {
+    position: relative;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    padding: 8px 0;
+}
+
+.menu-principal a::after {
+    content: "";
+
+    width: 0;
+    height: 2px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    background-color: #e91e63;
+
+    transition: width 0.3s ease;
+}
+
+.menu-principal a:hover::after,
+.menu-principal a:focus-visible::after {
+    width: 100%;
+}
+
+.carrito {
+    flex-shrink: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+
+    background-color: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+
+    padding: 10px 18px;
+
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.carrito:hover {
+    background-color: #e91e63;
+    transform: translateY(-2px);
+}
+
+
+/* ==========================================
+   PORTADA PRINCIPAL
+========================================== */
+
+.hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 145px 7% 100px;
+
+    background-image: url("../imagenes/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.hero-capa {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(15, 9, 9, 0.82) 0%,
+            rgba(15, 9, 9, 0.58) 38%,
+            rgba(15, 9, 9, 0.18) 68%,
+            rgba(15, 9, 9, 0.08) 100%
+        );
+}
+
+.hero-contenido {
+    width: min(650px, 100%);
+
+    position: relative;
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.hero-etiqueta {
+    margin-bottom: 15px;
+
+    color: #f5c7d7;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-contenido h1 {
+    margin-bottom: 8px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(55px, 7vw, 105px);
+    font-weight: normal;
+
+    line-height: 0.95;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero-contenido h2 {
+    margin-bottom: 25px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 3vw, 42px);
+    font-style: italic;
+    font-weight: normal;
+}
+
+.hero-descripcion {
+    max-width: 600px;
+
+    margin-bottom: 32px;
+
+    font-size: 17px;
+    line-height: 1.8;
+
+    color: rgba(255, 255, 255, 0.94);
+}
+
+.hero-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 50px;
+
+    padding: 13px 26px;
+    border-radius: 6px;
+
+    color: #e8dee1;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+
+    transition:
+        transform 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.boton:hover {
+    transform: translateY(-3px);
+}
+
+.boton-principal {
+    background-color: #d9145b;
+    border: 2px solid #d9145b;
+}
+
+.boton-principal:hover {
+    background-color: #ad0f48;
+    border-color: #ad0f48;
+}
+
+.boton-secundario {
+    background-color: rgba(0, 0, 0, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.boton-secundario:hover {
+    background-color: #ffffff;
+    color: #6d2b4c;
+}
+
+.indicador-scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 25px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+
+    color: #ffffff;
+    text-decoration: none;
+
+    font-size: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+
+    transform: translateX(-50%);
+}
+
+.indicador-scroll span:last-child {
+    font-size: 24px;
+}
+
+
+/* ==========================================
+   VALORES DE LA MARCA
+========================================== */
+
+.valores-marca {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    padding: 30px 5%;
+
+    background-color: #ffffff;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.valor {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 15px 25px;
+
+    border-right: 1px solid #eadfd8;
+}
+
+.valor:last-child {
+    border-right: none;
+}
+
+.valor > span {
+    font-size: 35px;
+}
+
+.valor h3 {
+    margin-bottom: 5px;
+
+    color: #8b3a62;
+
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.valor p {
+    color: #765f57;
+    font-size: 13px;
+    line-height: 1.5;
+}
+  
+  /* ==========================================
+  PRESENTACIÓN CULTURAL
+  ========================================== */
+  
+  .presentacion {
+  padding: 100px 15%;
+  
+  
+  background-color: #f3e5df;
+  
+  text-align: center;
+  
+  
+  }
+  
+  .presentacion-contenido {
+  max-width: 900px;
+  
+
+  margin: auto;
+  
+  
+  }
+  
+  .presentacion h2 {
+  font-size: 40px;
+  
+  
+  color: #8b3a62;
+  
+  margin-bottom: 25px;
+  
+  
+  }
+  
+  .presentacion p {
+  font-size: 18px;
+  
+
+  color: #5b4740;
+  
+  margin-bottom: 15px;
+  
+  
+  }
+  
+  /* ==========================================
+  CATÁLOGO
+  ========================================== */
+  
+  .catalogo {
+  padding: 100px 8%;
+  
+
+  text-align: center;
+
+  
+  }
+  
+  .catalogo h2 {
+  font-size: 40px;
+  
+  
+  color: #8b3a62;
+  
+  margin-bottom: 15px;
+  
+  
+  }
+  
+  .descripcion {
+  color: #765f57;
+  
+  
+  margin-bottom: 50px;
+  
+  
+  }
+  
+  /* PRODUCTOS */
+  
+  .productos{
+
+    max-width:1600px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(5,1fr);
+
+    gap:28px;
+
+    align-items:start;
+
+}
+  
+  /* TARJETA */
+  
+  .producto{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition: transform .35s ease,
+                box-shadow .35s ease;
+
+}
+  
+  .producto:hover{
+    transform: translateY(-8px);
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
+}
+  
+  /* IMÁGENES */
+  
+  .producto img{
+
+    width:100%;
+
+    height:260px;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:.5s;
+
+}
+.producto:hover img{
+
+    transform:scale(1.05);
+
+}
+  
+  /* NOMBRE */
+  
+  .producto h3 {
+  margin: 20px 15px 10px;
+  
+  
+  font-size: 19px;
+  
+  color: #8b3a62;
+  
+  
+  }
+  
+  /* DESCRIPCIÓN */
+  
+  .producto p {
+  padding: 0 20px;
+  
+  
+  color: #765f57;
+  
+  font-size: 14px;
+  
+  
+  }
+  
+  /* PRECIO */
+  
+  .precio {
+  display: block;
+  
+  
+  margin: 20px;
+  
+  font-size: 21px;
+  
+  font-weight: bold;
+  
+  color: #3d2923;
+  
+  
+  }
+  
+  /* BOTÓN PRODUCTO */
+  
+  .producto button {
+  border: none;
+  
+  
+  background-color: #8b3a62;
+  
+  color: white;
+  
+  padding: 12px 25px;
+  
+  border-radius: 25px;
+  
+  cursor: pointer;
+  
+  transition: 0.3s;
+  
+  
+  }
+  
+  .producto button:hover {
+  background-color: #6d2b4c;
+  }
+  
+  /* ==========================================
+  NUESTRAS ARTESANAS
+  ========================================== */
+  
+  .artesanas {
+  padding: 100px 8%;
+  
+  
+  background-color: #ffffff;
+  
+  
+  }
+  
+  .seccion-titulo {
+  text-align: center;
+  
+  
+  margin-bottom: 50px;
+  
+  
+  }
+  
+  .seccion-titulo h2 {
+  font-size: 40px;
+  
+
+  color: #8b3a62;
+  
+  margin-bottom: 10px;
+  
+  
+  }
+  
+  .seccion-titulo p {
+  color: #765f57;
+  
+  
+  font-size: 18px;
+
+  
+  }
+  
+  .artesanas-contenido {
+  max-width: 1100px;
+  
+  
+  margin: auto;
+  
+  display: grid;
+  
+  grid-template-columns:
+      1fr 1fr;
+  
+  gap: 60px;
+  
+  align-items: center;
+  
+  
+  }
+  
+  /* IMAGEN ARTESANAS */
+  
+  .artesanas-imagen img {
+  width: 100%;
+  
+
+  height: 450px;
+  
+  object-fit: cover;
+  
+  border-radius: 15px;
+  
+  
+  }
+  
+  /* TEXTO */
+  
+  .artesanas-texto h3 {
+  font-size: 32px;
+  
+
+  color: #8b3a62;
+  
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  .artesanas-texto p {
+  color: #5b4740;
+  
+  
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  /* ==========================================
+  CULTURA
+  ========================================== */
+  
+  .cultura {
+  padding: 100px 8%;
+  
+  
+  text-align: center;
+  
+  background-color: #fdf8f3;
+  
+  
+  }
+  
+  .cultura h2 {
+  font-size: 40px;
+  
+  
+  color: #8b3a62;
+  
+  margin-bottom: 15px;
+  
+  
+  }
+  
+  .cultura-tarjetas {
+  max-width: 1100px;
+  
+  
+  margin: 50px auto 0;
+  
+  display: grid;
+  
+  grid-template-columns:
+      repeat(3, 1fr);
+  
+  gap: 30px;
+  
+  
+  }
+  
+  .cultura-tarjeta {
+  background-color: white;
+  
+  
+  padding: 40px 25px;
+  
+  border-radius: 15px;
+  
+  box-shadow:
+      0 5px 20px
+      rgba(0, 0, 0, 0.07);
+  
+  transition: 0.3s;
+  
+  
+  }
+  
+  .cultura-tarjeta:hover {
+  transform: translateY(-5px);
+  }
+  
+  .icono {
+  font-size: 45px;
+  
+  
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  .cultura-tarjeta h3 {
+  color: #8b3a62;
+  
+
+  margin-bottom: 15px;
+  
+  font-size: 22px;
+  
+  
+  }
+  
+  .cultura-tarjeta p {
+  color: #765f57;
+  }
+  
+  /* ==========================================
+  X-PICHIL
+  ========================================== */
+  
+  .x-pichil {
+  min-height: 500px;
+  
+  
+  padding: 100px 15%;
+  
+  display: flex;
+  
+  align-items: center;
+  
+  text-align: center;
+  
+  background:
+      linear-gradient(
+          rgba(61, 41, 35, 0.65),
+          rgba(61, 41, 35, 0.65)
+      ),
+      url("imagenes/x-pichil.jpg");
+  
+  background-size: cover;
+  
+  background-position: center;
+  
+  color: white;
+  
+  
+  }
+  
+  .x-pichil-contenido {
+  max-width: 850px;
+  
+  
+  margin: auto;
+  
+  
+  }
+  
+  .x-pichil h2 {
+  font-size: 42px;
+  
+  
+  margin-bottom: 25px;
+  
+  
+  }
+  
+  .x-pichil p {
+  font-size: 18px;
+  
+  
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  /* ==========================================
+  IMPACTO
+  ========================================== */
+  
+  .impacto {
+  padding: 100px 8%;
+  
+  
+  text-align: center;
+  
+  background-color: #f3e5df;
+  
+  
+  }
+  
+  .impacto h2 {
+  font-size: 40px;
+  
+  
+  color: #8b3a62;
+  
+  margin-bottom: 10px;
+  
+  
+  }
+  
+  .impacto > p {
+  color: #765f57;
+  
+  
+  margin-bottom: 50px;
+  
+  font-size: 18px;
+  
+  
+  }
+  
+  .impacto-contenedor {
+  max-width: 1100px;
+  
+  
+  margin: auto;
+  
+  display: grid;
+  
+  grid-template-columns:
+      repeat(3, 1fr);
+  
+  gap: 30px;
+  
+  
+  }
+  
+  .impacto-item {
+  background-color: white;
+  
+  
+  padding: 35px 25px;
+  
+  border-radius: 15px;
+  
+  
+  }
+  
+  .impacto-item span {
+  font-size: 45px;
+  
+  
+  display: block;
+  
+  margin-bottom: 15px;
+  
+  
+  }
+  
+  .impacto-item h3 {
+  color: #8b3a62;
+  
+  
+  margin-bottom: 10px;
+  
+  
+  }
+  
+  .impacto-item p {
+  color: #765f57;
+  }
+  
+  /* ==========================================
+  CONTACTO
+  ========================================== */
+  
+  .contacto {
+  padding: 100px 10%;
+  
+  
+  text-align: center;
+  
+  background-color: #ffffff;
+  
+  
+  }
+  
+  .contacto h2 {
+  font-size: 40px;
+  
+  
+  color: #8b3a62;
+  
+  margin-bottom: 20px;
+  
+  
+  }
+  
+  .contacto p {
+  color: #765f57;
+  
+  
+  font-size: 18px;
+  
+  margin-bottom: 30px;
+
+  
+  }
+  
+  .contacto button {
+  border: none;
+  
+
+  background-color: #25D366;
+  
+  color: white;
+  
+  padding: 14px 30px;
+  
+  border-radius: 25px;
+  
+  cursor: pointer;
+  
+  font-size: 16px;
+  
+  transition: 0.3s;
+
+  
+  }
+  
+  .contacto button:hover {
+  transform: translateY(-2px);
+  }
+  
+  /* ==========================================
+  PIE DE PÁGINA
+  ========================================== */
+  
+  footer {
+  background-color: #3d2923;
+  
+  
+  color: white;
+  
+  text-align: center;
+  
+  padding: 30px;
+  
+  line-height: 1.8;
+
+  
+  }
+  
+  /* ===========================
+   PÁGINA COLECCIÓN
+=========================== */
+
+.coleccion-principal {
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
+
+.banner-coleccion {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.banner-coleccion h1 {
+    font-size: 48px;
+    color: #4b2f2f;
+    margin-bottom: 15px;
+}
+
+.banner-coleccion p {
+    max-width: 850px;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #6f5b54;
+    line-height: 1.6;
+}
+
+.filtros-catalogo {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+  /* ==========================================
+  RESPONSIVE - TABLETS
+  ========================================== */
+  
+  @media (max-width: 1100px) {
+  
+  
+  .productos {
+      grid-template-columns:
+          repeat(2, 1fr);
+  }
+  
+  .hero-texto h1 {
+      font-size: 48px;
+  }
+  
+  nav {
+      gap: 15px;
+  }
+  
+  
+  }
+  
+  /* ==========================================
+  RESPONSIVE - CELULARES
+  ========================================== */
+  
+  @media (max-width: 700px) {
+
+
+    /* aquí ya tienes otros estilos */
+
+    /* =========================
+       MÁS QUE UNA PRENDA - MÓVIL
+    ========================= */
+
+    .presentacion {
+        padding: 45px 7%;
+    }
+
+    .presentacion-contenido {
+        max-width: 100%;
+    }
+
+    .presentacion h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .presentacion p {
+        font-size: 15px;
+        line-height: 1.6;
+        margin-bottom: 12px;
+        text-align: justify;
+    }
+
+} /* aquí cierra el @media */
+  header {
+      position: relative;
+  
+      flex-direction: column;
+  
+      gap: 15px;
+  
+      padding: 20px;
+  }
+  
+  
+  nav {
+      flex-wrap: wrap;
+  
+      justify-content: center;
+  
+      gap: 12px;
+  }
+  
+  
+  .hero {
+      margin-top: 0;
+  
+      min-height: 80vh;
+  
+      padding: 50px 25px;
+  }
+  
+  
+  .hero-texto h1 {
+      font-size: 38px;
+  }
+  
+  
+  .hero-texto p {
+      font-size: 16px;
+  }
+  
+  
+  .hero-botones {
+      flex-direction: column;
+  
+      align-items: flex-start;
+  }
+  
+  
+  .presentacion {
+      padding: 70px 25px;
+  }
+  
+  
+  .presentacion h2 {
+      font-size: 32px;
+  }
+  
+  
+  .catalogo {
+      padding: 70px 20px;
+  }
+  
+  
+  .productos {
+      grid-template-columns: 1fr;
+  }
+  
+  
+  .producto img {
+      height: 350px;
+      transition: transform .45s ease;
+  }
+  
+  
+  .artesanas {
+      padding: 70px 25px;
+  }
+  
+  
+  .artesanas-contenido {
+      grid-template-columns: 1fr;
+  
+      gap: 35px;
+  }
+  
+  
+  .artesanas-imagen img {
+      height: 350px;
+  }
+  
+  
+  .cultura {
+      padding: 70px 25px;
+  }
+  
+  
+  .cultura-tarjetas {
+      grid-template-columns: 1fr;
+  }
+  
+  
+  .x-pichil {
+      padding: 70px 25px;
+  }
+  
+  
+  .x-pichil h2 {
+      font-size: 34px;
+  }
+  
+  
+  .impacto {
+      padding: 70px 25px;
+  }
+  
+  
+  .impacto-contenedor {
+      grid-template-columns: 1fr;
+  }
+  
+  
+  .contacto {
+      padding: 70px 25px;
+  }
+
+
+
+  .producto-imagen {
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.producto-imagen img {
+    transition: transform 0.4s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.05);
+}
+
+.etiqueta-artesanal {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 2;
+
+    background-color: #ffffff;
+    color: #8b3a62;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+.producto-informacion {
+    padding: 0 18px;
+}
+
+.producto-tecnica {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.producto-acciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.boton-detalles,
+.boton-agregar {
+    width: 100%;
+    min-height: 44px;
+    transition: all .3s ease;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 10px 8px;
+
+    border-radius: 22px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.boton-detalles,
+.boton-agregar {
+    display: inline-block;
+
+    border: none;
+    border-radius: 22px;
+
+    padding: 11px 18px;
+
+    font-size: 14px;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-detalles {
+    background-color: transparent;
+    color: #a01055;
+    border: 2px solid #caa6b7;
+}
+
+.boton-detalles:hover {
+    background-color: #d698cf;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(24, 12, 18, 0.2);
+}
+
+
+.boton-agregar{
+    background-color: #8b3a62;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.boton-agregar:hover{
+    background:#742b50;
+    color:#fff;
+    transform:translateY(-3px);
+    box-shadow:0 12px 24px rgba(139,58,98,.28);
+}
+
+.notificacion {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 3000;
+
+    max-width: 340px;
+
+    background-color: #ffffff;
+    color: #3d2923;
+
+    padding: 16px 22px;
+
+    border-left: 5px solid #25a060;
+    border-radius: 8px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition: 0.3s;
+}
+
+.notificacion-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    .producto-informacion {
+        padding: 16px 12px;
+    }
+
+    .producto-acciones {
+        gap: 6px;
+    }
+
+    .boton-detalles,
+    .boton-agregar {
+        min-height: 40px;
+        padding: 8px 5px;
+        font-size: 12px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1100px) {
+
+    .encabezado-principal {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 3%;
+}
+
+.marca {
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.menu-principal {
+    order: initial;
+    width: auto;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.menu-principal a {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.carrito-header {
+    margin-left: 20px;
+    flex-shrink: 0;
+    white-space: nowrap;
+    font-size: 12px;
+}
+
+    .hero {
+        padding-top: 110px;
+    }
+
+    .valores-marca {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .valor:nth-child(2) {
+        border-right: none;
+    }
+
+    .valor:nth-child(-n + 2) {
+        border-bottom: 1px solid #eadfd8;
+    }
+}
+
+@media (max-width: 700px) {
+    .encabezado-principal {
+        position: absolute;
+        padding: 15px 20px;
+    }
+
+    .marca {
+        width: 100%;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .marca-texto strong {
+        font-size: 23px;
+    }
+
+    .carrito {
+        position: absolute;
+        top: 95px;
+        right: 20px;
+    }
+.carrito-header {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.10);
+    white-space: nowrap;
+}
+    .menu-principal {
+        gap: 12px 18px;
+    }
+
+    .menu-principal a {
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: 900px;
+
+        align-items: flex-end;
+
+        padding: 260px 24px 120px;
+
+        background-position: 38% center;
+    }
+
+    .hero-capa {
+        background:
+            linear-gradient(
+                to top,
+                rgba(15, 9, 9, 0.94) 0%,
+                rgba(15, 9, 9, 0.72) 52%,
+                rgba(15, 9, 9, 0.25) 100%
+            );
+    }
+
+    .hero-contenido h1 {
+        font-size: 52px;
+    }
+
+    .hero-descripcion {
+        font-size: 15px;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+    .indicador-scroll {
+        display: none;
+    }
+
+    .valores-marca {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 18px 12px;
+}
+
+.valor {
+    padding: 14px 10px;
+    gap: 8px;
+    align-items: flex-start;
+}
+
+/* Línea vertical entre columnas */
+.valor:nth-child(odd) {
+    border-right: 1px solid #eadfd8;
+}
+
+.valor:nth-child(even) {
+    border-right: none;
+}
+
+/* Línea horizontal solamente entre las dos filas */
+.valor:nth-child(-n + 2) {
+    border-bottom: 1px solid #eadfd8;
+}
+
+.valor:nth-child(n + 3) {
+    border-bottom: none;
+}
+
+.valor > span {
+    font-size: 26px;
+}
+
+.valor h3 {
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.valor p {
+    font-size: 12px;
+    line-height: 1.4;
+}
+}
+  
+/*==========================
+    NUESTRA HISTORIA
+===========================*/
+
+.historia{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+    padding:100px 8%;
+
+    background:#fffaf7;
+
+}
+
+.subtitulo{
+
+    color:#c2185b;
+
+    font-weight:bold;
+
+    text-transform:uppercase;
+
+    letter-spacing:2px;
+
+}
+
+.historia h2{
+
+    font-size:48px;
+
+    margin:15px 0 30px;
+
+    color:#4b2f2f;
+
+}
+
+.historia p{
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#555;
+
+    margin-bottom:18px;
+
+}
+
+.historia-imagen img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+@media(max-width:900px){
+    /* =========================
+   NUESTRA HISTORIA - MÓVIL
+========================= */
+
+.historia {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 45px 7%;
+}
+
+.historia h2 {
+    font-size: 30px;
+    line-height: 1.2;
+    margin: 10px 0 20px;
+}
+
+.historia p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    text-align: justify;
+}
+
+.historia-imagen img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+}
+
+.subtitulo {
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.historia{
+
+grid-template-columns:1fr;
+
+}
+
+.historia h2{
+
+font-size:36px;
+
+}
+
+}
+
+/* ==========================================
+   SECCIÓN DE ARTESANAS
+========================================== */
+
+.seccion-artesanas {
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+.encabezado-seccion {
+    max-width: 760px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.encabezado-seccion h2 {
+    margin: 12px 0 18px;
+
+    color: #4b2f2f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(36px, 5vw, 52px);
+}
+
+.encabezado-seccion p {
+    color: #765f57;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.lista-artesanas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+.tarjeta-artesana {
+    overflow: hidden;
+
+    background-color: #fffaf7;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 28px rgba(61, 41, 35, 0.12);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.tarjeta-artesana:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 38px rgba(61, 41, 35, 0.18);
+}
+
+.tarjeta-artesana img {
+    width: 100%;
+    height: 340px;
+
+    display: block;
+    object-fit: cover;
+}
+
+.datos-artesana {
+    padding: 25px;
+}
+
+.datos-artesana h3 {
+    margin-bottom: 10px;
+
+    color: #8b3a62;
+    font-size: 23px;
+}
+
+.especialidad {
+    margin-bottom: 14px;
+
+    color: #4b2f2f;
+    font-weight: bold;
+}
+
+.datos-artesana > p:not(.especialidad) {
+    min-height: 55px;
+    margin-bottom: 22px;
+
+    color: #765f57;
+    line-height: 1.6;
+}
+
+.boton-historia {
+    width: 100%;
+
+    border: 2px solid #8b3a62;
+    border-radius: 24px;
+
+    background-color: transparent;
+    color: #8b3a62;
+
+    padding: 11px 18px;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.boton-historia:hover {
+    background-color: #8b3a62;
+    color: #ffffff;
+}
+
+@media (max-width: 950px) {
+    .lista-artesanas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 650px) {
+    @media (max-width: 650px) {
+
+    .seccion-artesanas {
+        padding: 45px 20px;
+    }
+
+    .encabezado-seccion {
+        margin-bottom: 30px;
+    }
+
+    .encabezado-seccion h2 {
+        font-size: 30px;
+        line-height: 1.2;
+        margin: 8px 0 12px;
+    }
+
+    .encabezado-seccion p {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .lista-artesanas {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .tarjeta-artesana img {
+        height: 210px;
+    }
+
+    .datos-artesana {
+        padding: 18px;
+    }
+
+    .datos-artesana h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .especialidad {
+        margin-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .datos-artesana > p:not(.especialidad) {
+        min-height: auto;
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .boton-historia {
+        padding: 9px 14px;
+        border-radius: 20px;
+        font-size: 14px;
+    }
+}
+}
+
+/*==============================
+    PROCESO
+==============================*/
+
+.proceso{
+
+background:#fff8f6;
+
+padding:100px 8%;
+
+}
+
+.linea-tiempo{
+
+max-width:900px;
+
+margin:auto;
+
+position:relative;
+
+}
+
+.linea-tiempo::before{
+
+content:"";
+
+position:absolute;
+
+left:35px;
+
+top:0;
+
+bottom:0;
+
+width:4px;
+
+background:#d81b60;
+
+}
+
+.paso{
+
+display:flex;
+
+gap:30px;
+
+margin-bottom:60px;
+
+position:relative;
+
+}
+
+.numero{
+
+width:70px;
+
+height:70px;
+
+background:#d81b60;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+color:white;
+
+font-size:28px;
+
+font-weight:bold;
+
+z-index:2;
+
+flex-shrink:0;
+
+box-shadow:0 10px 20px rgba(0,0,0,.2);
+
+}
+
+.contenido-paso{
+
+background:white;
+
+padding:25px;
+
+border-radius:20px;
+
+box-shadow:0 15px 30px rgba(0,0,0,.1);
+
+flex:1;
+
+}
+
+.contenido-paso img{
+
+width:100%;
+
+height:260px;
+
+object-fit:cover;
+
+border-radius:15px;
+
+margin-bottom:20px;
+
+}
+
+.contenido-paso h3{
+
+color:#8b3a62;
+
+margin-bottom:15px;
+
+font-size:28px;
+
+}
+
+.contenido-paso p{
+
+line-height:1.8;
+
+color:#555;
+
+}
+/* ===== LÍNEA DEL TIEMPO - LAPTOP ===== */
+
+@media (min-width: 769px) {
+
+    .proceso {
+        padding: 55px 8%;
+    }
+
+    .linea-tiempo {
+        max-width: 1050px;
+    }
+
+    .paso {
+        gap: 22px;
+        margin-bottom: 35px;
+        align-items: flex-start;
+    }
+
+    .numero {
+        width: 55px;
+        height: 55px;
+        font-size: 22px;
+    }
+
+    .linea-tiempo::before {
+        left: 27px;
+    }
+
+    .contenido-paso {
+        padding: 18px;
+    }
+
+    .contenido-paso img {
+        height: 190px;
+        margin-bottom: 12px;
+    }
+
+    .contenido-paso h3 {
+        font-size: 23px;
+        margin-bottom: 8px;
+    }
+
+    .contenido-paso p {
+        line-height: 1.5;
+        margin: 0;
+    }
+}
+/* =========================================
+   LÍNEA DEL TIEMPO - LAPTOP / ESCRITORIO
+========================================= */
+
+@media (min-width: 769px) {
+
+    .proceso {
+        padding: 55px 4%;
+    }
+
+    .linea-tiempo {
+        max-width: 1400px;
+        margin: 50px auto 0;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+        position: relative;
+        align-items: start;
+    }
+
+    /* línea horizontal */
+    .linea-tiempo::before {
+        content: "";
+        position: absolute;
+        left: 5%;
+        right: 5%;
+        top: 185px;
+        height: 4px;
+        background: #d81b60;
+        z-index: 0;
+    }
+
+    .paso {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+    }
+
+    /* zigzag */
+    .paso:nth-child(even) {
+        margin-top: 105px;
+    }
+
+    .numero {
+        width: 52px;
+        height: 52px;
+        flex-shrink: 0;
+        font-size: 20px;
+        margin: 0;
+        order: 2;
+    }
+
+    .contenido-paso {
+        width: 100%;
+        padding: 12px;
+        border-radius: 16px;
+        order: 1;
+    }
+
+    .contenido-paso img {
+        width: 100%;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 12px;
+        margin-bottom: 10px;
+    }
+
+    .contenido-paso h3 {
+        font-size: 18px;
+        margin-bottom: 7px;
+    }
+
+    .contenido-paso p {
+        font-size: 14px;
+        line-height: 1.45;
+        margin: 0;
+    }
+
+    /* pasos 2 y 4: número arriba de la tarjeta */
+    .paso:nth-child(even) .numero {
+        order: 1;
+    }
+
+    .paso:nth-child(even) .contenido-paso {
+        order: 2;
+    }
+}
+/* ===== LÍNEA DEL TIEMPO - CELULAR ===== */
+@media (max-width: 768px) {
+
+    .proceso {
+        padding: 35px 12px;
+    }
+
+    .paso {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-bottom: -55px;
+    gap: 0;
+}
+
+.paso:last-child {
+    margin-bottom: 0;
+}
+
+    /* Línea exactamente al centro */
+    .linea-tiempo::before {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 3px;
+    }
+
+    /* Tarjetas más pequeñas */
+    .contenido-paso {
+        flex: 0 0 43%;
+        width: 43%;
+        padding: 9px;
+        border-radius: 12px;
+    }
+
+    /* 1, 3 y 5 a la derecha */
+    .paso:nth-child(odd) {
+        justify-content: flex-end;
+    }
+
+    /* 2 y 4 a la izquierda */
+    .paso:nth-child(even) {
+        justify-content: flex-start;
+    }
+
+    /* Número en el centro de la línea */
+    .numero {
+        position: absolute;
+        left: 50%;
+        top: 12px;
+        transform: translateX(-50%);
+        width: 34px;
+        height: 34px;
+        font-size: 14px;
+        z-index: 3;
+    }
+
+    /* Imágenes compactas */
+    .contenido-paso img {
+        width: 100%;
+        height: 90px;
+        object-fit: cover;
+        margin-bottom: 7px;
+        border-radius: 8px;
+    }
+
+    .contenido-paso h3 {
+        font-size: 15px;
+        line-height: 1.2;
+        margin-bottom: 5px;
+    }
+
+    .contenido-paso p {
+        font-size: 11px;
+        line-height: 1.35;
+        text-align: left;
+        margin: 0;
+    }
+}
+/*==============================
+        X-PICHIL
+==============================*/
+
+.xpichil{
+
+padding:100px 8%;
+
+background:white;
+
+}
+
+.xpichil-contenido{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:70px;
+
+align-items:center;
+
+}
+
+.xpichil-imagen img{
+
+width:100%;
+
+border-radius:20px;
+
+box-shadow:0 20px 35px rgba(0,0,0,.15);
+
+}
+
+.xpichil h2{
+
+font-size:50px;
+
+margin:15px 0 25px;
+
+color:#4b2f2f;
+
+}
+
+.xpichil p{
+
+line-height:1.9;
+
+color:#555;
+
+font-size:17px;
+
+}
+
+.xpichil-datos{
+
+margin-top:35px;
+
+display:grid;
+
+gap:25px;
+
+}
+
+.dato{
+
+display:flex;
+
+gap:18px;
+
+align-items:flex-start;
+
+}
+
+.dato span{
+
+font-size:34px;
+
+}
+
+.dato strong{
+
+display:block;
+
+margin-bottom:5px;
+
+color:#8b3a62;
+
+}
+
+@media(max-width:900px){
+
+.xpichil-contenido{
+
+grid-template-columns:1fr;
+
+}
+
+.xpichil h2{
+
+font-size:36px;
+
+}
+
+}
+
+/* ==========================================
+   DESCUBRE X-PICHIL
+========================================== */
+
+.descubre-xpichil {
+    padding: 110px 7%;
+    background-color: #fffaf7;
+}
+
+.xpichil-encabezado {
+    max-width: 820px;
+    margin: 0 auto 55px;
+    text-align: center;
+}
+
+.xpichil-encabezado h2 {
+    margin: 12px 0 18px;
+
+    color: #4b2f2f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 6vw, 65px);
+}
+
+.xpichil-encabezado p {
+    color: #765f57;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* IMAGEN PANORÁMICA */
+
+.xpichil-panorama {
+    height: 620px;
+    max-width: 1400px;
+
+    position: relative;
+
+    margin: 0 auto 80px;
+
+    overflow: hidden;
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 25px 55px
+        rgba(61, 41, 35, 0.18);
+}
+
+.xpichil-panorama img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition: transform 8s ease;
+}
+
+.xpichil-panorama:hover img {
+    transform: scale(1.035);
+}
+
+.xpichil-panorama::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(35, 18, 18, 0.78),
+            rgba(35, 18, 18, 0.08) 65%
+        );
+}
+
+.xpichil-panorama figcaption {
+    position: absolute;
+    left: 55px;
+    right: 55px;
+    bottom: 45px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    color: #ffffff;
+}
+
+.xpichil-panorama figcaption span {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.xpichil-panorama figcaption strong {
+    max-width: 650px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 5vw, 58px);
+    font-weight: normal;
+}
+
+
+/* CARACTERÍSTICAS */
+
+.xpichil-caracteristicas {
+    max-width: 1200px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+
+    margin: 0 auto 90px;
+}
+
+.xpichil-caracteristicas article {
+    padding: 12px 15px;
+}
+
+.xpichil-caracteristicas article > span {
+    display: inline-block;
+    margin-bottom: 15px;
+
+    font-size: 40px;
+
+    transition: transform 0.5s ease;
+}
+
+.xpichil-caracteristicas article:hover > span {
+    transform: translateY(-5px);
+}
+
+.xpichil-caracteristicas h3 {
+    margin-bottom: 12px;
+
+    color: #8b3a62;
+    font-size: 20px;
+}
+
+.xpichil-caracteristicas p {
+    color: #765f57;
+    line-height: 1.7;
+}
+
+
+/* GALERÍA ARTÍSTICA */
+
+.xpichil-galeria {
+    max-width: 1300px;
+    min-height: 850px;
+
+    display: grid;
+
+    grid-template-columns:
+        1.35fr 0.65fr;
+
+    grid-template-rows:
+        350px 350px;
+
+    gap: 24px;
+
+    margin: 0 auto 100px;
+}
+
+.galeria-item {
+    position: relative;
+
+    overflow: hidden;
+
+    background-color: #eee2dc;
+    border-radius: 22px;
+
+    box-shadow:
+        0 14px 35px
+        rgba(61, 41, 35, 0.13);
+}
+
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    object-fit: cover;
+
+    transition:
+        transform 1s ease,
+        filter 1s ease;
+}
+
+.galeria-item::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(30, 15, 15, 0.72),
+            transparent 62%
+        );
+
+    opacity: 0.82;
+
+    transition: opacity 0.8s ease;
+}
+
+.galeria-item figcaption {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    bottom: 22px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    color: #ffffff;
+
+    transform: translateY(6px);
+
+    transition: transform 0.7s ease;
+}
+
+.galeria-item figcaption strong {
+    font-size: 22px;
+}
+
+.galeria-item figcaption span {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* EFECTOS DIFERENTES Y SUAVES */
+
+.galeria-grande {
+    grid-row: 1 / 3;
+}
+
+.galeria-grande:hover img {
+    transform: scale(1.045);
+}
+
+.galeria-superior:hover img {
+    transform: translateY(-4px) scale(1.04);
+}
+
+.galeria-inferior:hover img {
+    transform: scale(1.035);
+    filter: brightness(0.86);
+}
+
+.galeria-horizontal {
+    grid-column: 1 / 3;
+
+    height: 360px;
+}
+
+.galeria-horizontal:hover img {
+    transform: translateX(5px) scale(1.025);
+}
+
+.galeria-item:hover figcaption {
+    transform: translateY(0);
+}
+
+.galeria-item:hover::after {
+    opacity: 1;
+}
+
+
+/* MAPA */
+
+.xpichil-mapa {
+    max-width: 1250px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 60px;
+
+    align-items: center;
+
+    margin: 0 auto 90px;
+    padding: 55px;
+
+    background-color: #ffffff;
+
+    border-radius: 26px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(61, 41, 35, 0.1);
+}
+
+.mapa-informacion h2 {
+    margin: 12px 0 20px;
+
+    color: #4b2f2f;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 38px;
+}
+
+.mapa-informacion p {
+    margin-bottom: 25px;
+
+    color: #765f57;
+    line-height: 1.8;
+}
+
+.boton-mapa {
+    background-color: #8b3a62;
+    border: 2px solid #8b3a62;
+}
+
+.boton-mapa:hover {
+    background-color: #6d2b4c;
+}
+
+.mapa-interactivo {
+    min-height: 380px;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 15px 35px
+        rgba(61, 41, 35, 0.16);
+}
+
+.mapa-interactivo iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 380px;
+
+    display: block;
+
+    border: 0;
+
+    filter: saturate(0.9);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
+}
+
+.mapa-interactivo:hover iframe {
+    transform: scale(1.01);
+    filter: saturate(1);
+}
+
+
+/* FRASE FINAL */
+
+.xpichil-frase {
+    max-width: 900px;
+
+    margin: auto;
+    padding: 30px;
+
+    text-align: center;
+}
+
+.xpichil-frase p {
+    color: #8b3a62;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(25px, 4vw, 40px);
+    font-style: italic;
+    line-height: 1.5;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .xpichil-caracteristicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .xpichil-galeria {
+        min-height: auto;
+
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px 320px 320px;
+    }
+
+    .galeria-grande {
+        grid-column: 1 / 3;
+        grid-row: auto;
+    }
+
+    .galeria-horizontal {
+        grid-column: 1 / 3;
+        height: auto;
+    }
+
+    .xpichil-mapa {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .descubre-xpichil {
+        padding: 75px 20px;
+    }
+
+    .xpichil-panorama {
+        height: 580px;
+        border-radius: 22px;
+    }
+
+    .xpichil-panorama figcaption {
+        left: 25px;
+        right: 25px;
+        bottom: 30px;
+    }
+
+    .xpichil-caracteristicas {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .xpichil-galeria {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeria-item,
+    .galeria-grande,
+    .galeria-horizontal {
+        width: 100%;
+        height: 340px;
+    }
+
+    .xpichil-mapa {
+        padding: 30px 22px;
+    }
+
+    .mapa-interactivo,
+.mapa-interactivo iframe {
+    min-height: 320px;
+}
+}
+
+/*=========================================
+     MENSAJE DE LAS ARTESANAS
+==========================================*/
+
+.foto-artesanas{
+
+    max-width:1000px;
+
+    margin:15px auto;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.foto-artesanas img{
+
+    width:100%;
+
+    display:block;
+
+}
+.leyenda-foto{
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    color:#7b6a66;
+
+    font-style:italic;
+
+}
+
+.mensaje-contenido {
+    max-width: 900px;
+    margin: auto;
+    padding: 65px 35px 55px;
+
+    text-align: center;
+    color: #4a2b2b;
+}
+
+.mensaje-contenido h2 {
+    max-width: 820px;
+    margin: 18px auto 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(40px, 5vw, 62px);
+    font-weight: normal;
+    line-height: 1.1;
+}
+
+.mensaje{
+
+    max-width:720px;
+
+    margin:auto;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+.mensaje p{
+
+    margin:auto;
+
+}
+
+.firma {
+    margin-top: 36px;
+    text-align:center;
+}
+
+.firma h3 .firma h3{
+    margin-bottom:30px;
+    font-family:Georgia, serif;
+    font-size:32px;
+    font-weight:normal;
+    text-align:center;
+}
+
+.firma p{
+    text-align:center;
+    margin:0;
+    line-height:1;
+}
+
+.firma strong{
+    display:block;
+    font-size:32px;
+    margin-bottom:4px;
+}
+
+.frase-final {
+    max-width: 720px;
+
+    margin: 38px auto 0;
+    padding-top: 22px;
+
+    border-top: 1px solid #d8c2b9;
+
+    color: #6d4444;
+    font-size: 17px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.overlay-artesanas h2{
+
+font-size:38px;
+
+}
+
+.mensaje{
+
+font-size:17px;
+
+line-height:1.8;
+
+}
+
+.firma h3{
+
+font-size:26px;
+
+}
+
+}
+.producto-categoria {
+    margin-bottom: 8px;
+
+    color: #c2185b;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.producto-descripcion {
+    min-height: 52px;
+
+    color: #6f5b54;
+    line-height: 1.6;
+}
+
+.producto-informacion h3{
+    min-height: 72px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    margin-bottom:12px;
+}
+
+.precio {
+    display: block;
+
+    margin: 18px 0;
+
+    color: #8b3a62;
+
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* =========================================
+   FILTROS DEL CATÁLOGO
+========================================= */
+
+.filtros-catalogo {
+    max-width: 1100px;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    margin: 0 auto 45px;
+}
+
+.filtros-catalogo button {
+    border: 1px solid #c9aaa0;
+    border-radius: 24px;
+
+    background-color: transparent;
+    color: #6d4444;
+
+    padding: 11px 19px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.filtros-catalogo button:hover {
+    border-color: #9b315f;
+    transform: translateY(-2px);
+}
+
+.filtros-catalogo .filtro-activo {
+    background-color: #9b315f;
+    border-color: #9b315f;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(155, 49, 95, 0.2);
+}
+
+@media (max-width: 600px) {
+    .filtros-catalogo {
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+
+        overflow-x: auto;
+
+        padding: 0 4px 12px;
+    }
+
+    .filtros-catalogo button {
+        flex-shrink: 0;
+    }
+}
+/* Igualar la altura de las tarjetas */
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.producto-informacion h3 {
+    min-height: 52px;
+    margin-bottom: 8px;
+}
+
+.producto-descripcion {
+    min-height: 48px;
+    margin-bottom: 10px;
+}
+
+.precio {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+/* Ajuste final del botón Agregar */
+.boton-agregar {
+    background-color: #8b3a62 !important;
+    color: #ffffff !important;
+    border: 2px solid #8b3a62 !important;
+    opacity: 1 !important;
+}
+
+.boton-agregar:hover {
+    background-color: #742b50 !important;
+    color: #ffffff !important;
+}
+
+.producto-imagen {
+    position: relative;
+    overflow: hidden;
+}
+
+  .boton-favorito{
+    font-size:24px;
+    font-weight:bold;
+    font-family:Arial, sans-serif;
+    color:#c2185b;
+}
+
+.boton-favorito:hover {
+    transform: scale(1.1);
+    background-color: #4b0303;
+}
+.boton-favorito {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 3;
+
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: #700a5a;
+    color: #c2185b;
+
+    font-size: 28px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.boton-favorito:hover {
+    transform: scale(1.1);
+    background-color: #f5f2f3;
+}
+.boton-quitar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+
+    background: #f49bd3;
+    color: #a01055;
+
+    border: 2px solid #dca6b7;
+    border-radius: 25px;
+
+    padding: 10px 18px;
+
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all .3s ease;
+}
+.boton-quitar:hover{
+    background: #a01055;
+    color: #f4f1f1;
+    border-color: #a01055;
+    transform: translateY(-2px);
+}
+.coleccion-principal {
+    padding-top: 55px;
+}
+/* ===========================
+   PÁGINA FAVORITOS
+=========================== */
+
+.pagina-favoritos {
+    padding-top: 115px;
+}
+
+.pagina-favoritos .encabezado-seccion {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.favoritos-vacios {
+    width: 100%;
+    max-width: none;
+    margin: 70px auto;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.favoritos-vacios-icono {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.favoritos-vacios h2 {
+    margin-bottom: 14px;
+    font-size: 30px;
+}
+
+.favoritos-vacios p {
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+#contenedor-favoritos.sin-favoritos {
+    display: block;
+    width: 100%;
+}
+
+#contenedor-favoritos.sin-favoritos .favoritos-vacios {
+    width: 100%;
+    max-width: 600px;
+    margin: 70px auto;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* =========================================
+   FAVORITOS - ESTADO VACÍO
+========================================= */
+
+#contenedor-favoritos:has(.favoritos-vacios) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#contenedor-favoritos .favoritos-vacios {
+    width: 90%;
+    max-width: 600px;
+    margin: 5px auto 40px;
+    padding: 30px 20px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#contenedor-favoritos .favoritos-vacios-icono {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#contenedor-favoritos .favoritos-vacios h2 {
+    font-size: 30px;
+    margin: 0 0 14px;
+    text-align: center;
+}
+
+#contenedor-favoritos .favoritos-vacios p {
+    margin: 0 auto 24px;
+    line-height: 1.6;
+    text-align: center;
+    max-width: 450px;
+}
+#contenedor-favoritos:has(.favoritos-vacios) {
+    margin-top: -70px;
+}
+/* =====================================
+   ENCABEZADO - LAPTOP / ESCRITORIO
+===================================== */
+
+@media (min-width: 1101px) {
+
+    .encabezado-principal {
+        width: 100%;
+        min-height: 88px;
+
+        display: grid;
+        grid-template-columns: 250px 1fr auto;
+        align-items: center;
+
+        padding: 10px 5%;
+        gap: 20px;
+    }
+    .marca-texto strong {
+    font-size: 24px;
+}
+
+.marca-texto small {
+    font-size: 10px;
+}
+.hero {
+    padding-top: 120px;
+}
+.carrito-header {
+    justify-self: end;
+    margin: 0;
+    white-space: nowrap;
+
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+
+    padding: 9px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.10);
+}
+
+    /* CHAC NICTÉ → izquierda */
+    .marca {
+        justify-self: start;
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    /* Menú → centro */
+    .menu-principal {
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 22px;
+    }
+
+    .menu-principal a {
+        white-space: nowrap;
+    }
+
+    /* Carrito → derecha */
+    .carrito-header {
+        justify-self: end;
+        margin: 0;
+        white-space: nowrap;
+    }
+}
+.seccion-artesanas {
+    padding: 55px 8%;
+}
+
+.encabezado-seccion {
+    margin-bottom: 30px;
+}
+
+.encabezado-seccion h2 {
+    font-size: 42px;
+    margin: 8px 0 12px;
+}
+
+.encabezado-seccion p {
+    font-size: 16px;
+    margin: 0;
+}
+
+.lista-artesanas {
+    gap: 24px;
+}
+
+.tarjeta-artesana img {
+    height: 260px;
+}
