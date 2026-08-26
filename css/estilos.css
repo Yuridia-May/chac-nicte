@@ -1038,7 +1038,41 @@ CONFIGURACIÓN GENERAL
   
   
   }
-  
+  /* ===== ACCIONES DE PRODUCTO - ESCRITORIO ===== */
+
+.producto-acciones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 15px 18px;
+}
+
+.boton-detalles,
+.boton-agregar {
+    width: 100%;
+    min-height: 44px;
+    border-radius: 22px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-detalles {
+    background-color: transparent;
+    color: #a01055;
+    border: 2px solid #caa6b7;
+}
+
+.boton-agregar {
+    border: none;
+    background-color: #8b3a62;
+    color: white;
+}
   /* ==========================================
   RESPONSIVE - CELULARES
   ========================================== */
@@ -1073,7 +1107,7 @@ CONFIGURACIÓN GENERAL
         text-align: justify;
     }
 
-} /* aquí cierra el @media */
+ /* aquí cierra el @media */
   header {
       position: relative;
   
@@ -1335,7 +1369,7 @@ CONFIGURACIÓN GENERAL
     opacity: 1;
     transform: translateY(0);
 }
-
+  }
 @media (max-width: 600px) {
     .producto-informacion {
         padding: 16px 12px;
