@@ -2,7 +2,7 @@ const contenedor =
     document.getElementById("contenedor-productos");
 
 const botonCarritoPrincipal =
-    document.querySelector(".carrito");
+    document.querySelector(".carrito-coleccion");
 
 let carrito =
     JSON.parse(localStorage.getItem("carritoChacNicte")) || [];
@@ -84,13 +84,7 @@ function mostrarProductos(listaProductos) {
                     >
                         Ver detalles
                     </a>
-<button
-    type="button"
-    class="boton-agregar"
-    data-id="${producto.id}"
->
-    🛒 Agregar
-</button>
+
                 </div>
 
             </div>
@@ -243,7 +237,6 @@ function actualizarContadorCarrito() {
     botonCarritoPrincipal.textContent =
         `🛒 Carrito (${cantidadTotal})`;
 }
-
 
 /* =========================================
    INICIAR

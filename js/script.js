@@ -311,7 +311,7 @@ function actualizarContadorCarrito() {
         JSON.parse(localStorage.getItem("carritoChacNicte")) || [];
 
     const cantidadTotal = carrito.reduce(
-        (total, producto) => total + producto.cantidad,
+        (total, producto) => total + (producto.cantidad || 1),
         0
     );
 console.log("Cantidad del carrito:", cantidadTotal);
