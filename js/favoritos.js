@@ -106,7 +106,9 @@ function mostrarFavoritos() {
     });
 
     activarBotonesQuitar();
+    activarBotonesFavoritos();
 }
+
 function activarBotonesFavoritos() {
 
     const botonesFavorito =
@@ -136,7 +138,7 @@ function activarBotonesFavoritos() {
                 JSON.stringify(favoritos)
             );
 
-            mostrarProductos(productos);
+            mostrarFavoritos();
 
         });
 

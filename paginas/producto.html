@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Producto | Chac Nicté</title>
+    <title>Producto | Flor de Mayo </title>
 
     <link rel="stylesheet" href="../css/producto.css">
 
@@ -18,7 +18,10 @@
 
 <header>
 
-    <h1>🌺 CHAC NICTÉ</h1>
+   <div class="logo-producto">
+    <h1>🌺 Flor de Mayo</h1>
+    <p class="slogan-producto">Tejiendo tradición, compartiendo cultura</p>
+</div>
 
     <nav>
         <a href="../index.html">Inicio</a>
@@ -35,30 +38,31 @@
 
 <a href="../index.html#contacto">Contacto</a>
 
-<a href="carrito.html">🛒 Carrito</a>
+<a href="carrito.html" class="carrito-producto">🛒 Carrito</a>
     </nav>
 
 </header>
 
 <main class="producto">
 
-    <section class="galeria">
+   <section class="galeria">
 
-        <img id="producto-imagen" src="../imagenes/blusa1.jpg" class="imagen-principal">
+    <img id="producto-imagen" src="../imagenes/blusa1.jpg" class="imagen-principal">
+
+    <div class="bloque-miniaturas">
+
+        <h3 class="titulo-miniaturas">También te puede interesar</h3>
 
         <div class="miniaturas">
-
             <img src="../imagenes/blusa1.jpg" data-id="1">
-
             <img src="../imagenes/blusa2.jpg" data-id="2">
-
             <img src="../imagenes/blusa3.jpg" data-id="3">
-
             <img src="../imagenes/blusa4.jpg" data-id="4">
-
         </div>
 
-    </section>
+    </div>
+
+</section>
 
     <section class="informacion">
 
@@ -123,63 +127,21 @@
 
 <section class="historia">
 
-    <h2>Historia de esta prenda</h2>
+    <h2>El valor de lo hecho a mano</h2>
 
     <p>
 
-        Cada puntada representa una tradición transmitida de generación en
-        generación por mujeres artesanas de X-Pichil. La elaboración de esta
-        blusa requiere paciencia, dedicación y habilidad, preservando técnicas
-        ancestrales que forman parte del patrimonio cultural de la comunidad.
+        Cada prenda refleja el trabajo, 
+        la dedicación y los conocimientos 
+        de las artesanas de X-Pichil. A través 
+        de sus bordados se preservan técnicas y 
+        saberes que forman parte de la tradición 
+        artesanal de la comunidad.
 
     </p>
 
 </section>
 
-<section class="relacionados">
-
-<h2>También te puede interesar</h2>
-
-<div class="productos">
-
-<div class="card">
-
-<img src="../imagenes/blusa2.jpg">
-
-<h3>Blusa Primavera</h3>
-
-<p>$780 MXN</p>
-
-</div>
-
-<div class="card">
-
-<img src="../imagenes/blusa3.jpg">
-
-<h3>Blusa Tradición</h3>
-
-<p>$920 MXN</p>
-
-</div>
-
-<div class="card">
-
-<img
-    id="producto-imagen"
-    class="imagen-principal"
-    src="../imagenes/blusa1.jpg"
-    alt="Blusa Bordada Floral"
->
-
-<h3>Blusa Maya</h3>
-
-<p>$850 MXN</p>
-
-</div>
-
-</div>
-
-</section>
 <script src="../js/productos.js"></script>
 <script src="../js/producto.js"></script>
 </body>
